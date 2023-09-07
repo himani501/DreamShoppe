@@ -31,13 +31,15 @@ const Arrow = styled.div`
 const Wrapper = styled.div`
   height: 100%;
   display: flex;
-  transform: translateX(-200vw);
+  transition: all 1.5s ease; //animation
+  transform: translateX(${(props)=>props.slideIndex * -100}vw); // usage of props in CSS
 `
 const Slide = styled.div`
   width: 100vw;
   height: 100vh;
   display: flex;
   align-items: center;
+  background-color: antiquewhite;
 `
 const ImgContainer = styled.div`
   height: 100%;
@@ -45,7 +47,7 @@ const ImgContainer = styled.div`
 `
 const Image = styled.img`
   height: 100%;
-  width:100%
+  width:90%;
 `
 const InfoContainer = styled.div`
   flex:1;
@@ -73,9 +75,9 @@ const Slider = () => {
     const [slideIndex, setSlideIndex] = useState(0)
     const handleClick = (direction) => {
         if (direction === "left") {
-            setSlideIndex(slideIndex > 0 ? slideIndex-1 : 2)
+            setSlideIndex(slideIndex > 0 ? slideIndex-1 : 6)
         } else {
-            setSlideIndex(slideIndex < 2 ? slideIndex+1 : 0)
+            setSlideIndex(slideIndex < 6 ? slideIndex+1 : 0)
         }
     };
     return (
@@ -87,7 +89,7 @@ const Slider = () => {
                 { SliderImages.map((item) => (
                     <Slide>
                         <ImgContainer>
-                            <Image src={item.img}/>
+                            <Image src={item.img} key={item.id}/>
                         </ImgContainer>
                         <InfoContainer>
                             <Title>{item.title}</Title>

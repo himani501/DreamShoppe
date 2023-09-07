@@ -51,6 +51,10 @@ const SignIn = styled.a`
 const ShoppingCartWrapper = styled.div`
     cursor: pointer;
 `;
+const Title = styled.h1`
+  font-weight: 900;
+  letter-spacing: 3px;
+`
 const Navbar = () => {
     return (
         <Container>
@@ -67,7 +71,7 @@ const Navbar = () => {
                     </SearchWrapper>
                 </Left>
                 <Center>
-                    <h1><b>DREAMSHOPPE</b></h1>
+                    <Title>DREAMSHOPPE</Title>
                 </Center>
                 <Right>
                     <Register>Register</Register>
