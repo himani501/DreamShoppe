@@ -1,0 +1,59 @@
+.container{
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(
+                  rgba(255,255,255,0.5),
+                  rgba(255,255,255,0.5)
+  ), url("https://img.freepik.com/free-photo/beautiful-smiling-young-blonde-woman-pointing-sunglasses-holding-shopping-bags-credit-card-pink-wall_496169-1506.jpg?w=2000&t=st=1694111647~exp=1694112247~hmac=a49375acf744370d825200215259ea318904f26f9f8a25605cdea01335f7dcca")
+  center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.wrapper{
+  padding: 20px;
+  width: 40%;
+  background-color: white;
+}
+
+.title{
+  font-size: 24px;
+  font-weight: 300;
+}
+
+.Form{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.Input{
+  flex: 1;
+  min-width: 40%;
+  margin: 20px 10px 0px 0px;
+  padding: 10px;
+}
+
+.agreement{
+  font-size: 12px;
+  margin: 20px 0px;
+  align-items: center;
+  display: flex;
+}
+
+.btn{
+  width: 40%;
+  border: none;
+  padding: 15px 20px;
+  background-color: teal;
+  color: white;
+  cursor: pointer;
+}
+
+.Link{
+  font-size: 12px;
+  text-decoration: underline;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+}
